@@ -1,4 +1,4 @@
-# 🖥️ Windows Server Deployment - TecnoSoluciones S.A.
+# 🖥️ Windows Server Deployment
 
 Este repositorio contiene la documentación técnica y el despliegue del servidor principal de la empresa TecnoSoluciones S.A. utilizando el sistema operativo Windows Server 2022.
 
