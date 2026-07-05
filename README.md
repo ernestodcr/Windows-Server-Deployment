@@ -35,6 +35,8 @@ Se diseñó la estructura jerárquica de la empresa y se realizó el aprovisiona
 * **Estructura Departamental (OU):** Se desplegó el contenedor raíz `TECNOSOLUCIONES` dividiendo la infraestructura en dos Unidades Organizativas clave: `Informática` (Soporte Técnico) y `Contabilidad` (Gestión Administrativa).
 * **Gestión de Identidades Centralizada:** Se dio de alta al usuario técnico corporativo (`ernestoti`) y a la usuaria del departamento administrativo (`anacon`), demostrando el aprovisionamiento centralizado en la base de datos de Active Directory.
 * **Políticas de Ciberseguridad Diferenciadas:** Se aplicó un control estricto de contraseñas. Para el perfil técnico se deshabilitó la expiración de claves por motivos de laboratorio, mientras que para el perfil administrativo se forzó la política real de cambio obligatorio de contraseña en el primer inicio de sesión.
+* **Resolución de Enrutamiento DNS:** Se implementó un sistema de resolución dual configurando `127.0.0.1` como DNS preferente (para preservar la integridad del dominio local) y `8.8.8.8` como DNS alternativo, garantizando la salida segura del servidor hacia internet a través de la puerta de enlace `10.0.2.2`.
+
 
 
 
