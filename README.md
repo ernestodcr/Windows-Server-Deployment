@@ -37,6 +37,14 @@ Se diseñó la estructura jerárquica de la empresa y se realizó el aprovisiona
 * **Políticas de Ciberseguridad Diferenciadas:** Se aplicó un control estricto de contraseñas. Para el perfil técnico se deshabilitó la expiración de claves por motivos de laboratorio, mientras que para el perfil administrativo se forzó la política real de cambio obligatorio de contraseña en el primer inicio de sesión.
 * **Resolución de Enrutamiento DNS:** Se implementó un sistema de resolución dual configurando `127.0.0.1` como DNS preferente (para preservar la integridad del dominio local) y `8.8.8.8` como DNS alternativo, garantizando la salida segura del servidor hacia internet a través de la puerta de enlace `10.0.2.2`.
 
+## 🛡️ 6. Gestión de Directivas de Grupo Avanzadas (GPO)
+Se implementó el primer mecanismo de endurecimiento (hardening) y gobernanza de la red corporativa mediante la inyección automatizada de políticas de control sobre el entorno de usuario:
+
+* **Abstracción del Objeto:** Se redactó de forma independiente la directiva `Bloqueo de Panel de Control` dentro del almacén seguro de objetos, evitando impactos directos en producción durante la fase de desarrollo de la norma.
+* **Inyección de Plantillas Administrativas:** Se modificó la plantilla del núcleo del sistema operativo habilitando la restricción nativa para impedir el acceso tanto a la configuración de Windows como al panel de control clásico.
+* **Vinculación Departamental Seleccionada:** Se aplicó el vínculo directo de la directiva sobre la Unidad Organizativa de `Contabilidad`. Esto asegura que los perfiles administrativos (como la cuenta `anacon`) hereden la prohibición de manera obligatoria, mientras que el departamento de `Informática` queda exento para mantener sus privilegios de soporte técnico.
+
+
 
 
 
