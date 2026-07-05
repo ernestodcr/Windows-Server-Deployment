@@ -29,6 +29,13 @@ Se consolidó el hito de arquitectura centralizada al ascender el servidor indep
 * **Identidad NetBIOS y Rutas:** Se asignó el identificador simplificado `TECNOSOLUCIONES` para facilitar los inicios de sesión de los empleados y se aprovisionaron los directorios protegidos `NTDS` (Base de datos de seguridad) y `SYSVOL` (Políticas de grupo).
 * **Consolidación del Rol:** Tras superar con éxito el test de requisitos previos del sistema, se ejecutó la promoción y el reinicio automatizado del nodo, logrando el inicio de sesión oficial bajo la cuenta maestra `TECNOSOLUCIONES\Administrador`.
 
+## 🗂️ 5. Estructura Organizativa y Aprovisionamiento de Usuarios (OU)
+Se diseñó la estructura jerárquica de la empresa y se realizó el aprovisionamiento de las identidades según sus funciones en la oficina:
+
+* **Estructura Departamental (OU):** Se desplegó el contenedor raíz `TECNOSOLUCIONES` dividiendo la infraestructura en dos Unidades Organizativas clave: `Informática` (Soporte Técnico) y `Contabilidad` (Gestión Administrativa).
+* **Gestión de Identidades Centralizada:** Se dio de alta al usuario técnico corporativo (`ernestoti`) y a la usuaria del departamento administrativo (`anacon`), demostrando el aprovisionamiento centralizado en la base de datos de Active Directory.
+* **Políticas de Ciberseguridad Diferenciadas:** Se aplicó un control estricto de contraseñas. Para el perfil técnico se deshabilitó la expiración de claves por motivos de laboratorio, mientras que para el perfil administrativo se forzó la política real de cambio obligatorio de contraseña en el primer inicio de sesión.
+
 
 
 
