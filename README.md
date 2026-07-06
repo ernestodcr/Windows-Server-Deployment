@@ -44,6 +44,14 @@ Se implementó el primer mecanismo de endurecimiento (hardening) y gobernanza de
 * **Inyección de Plantillas Administrativas:** Se modificó la plantilla del núcleo del sistema operativo habilitando la restricción nativa para impedir el acceso tanto a la configuración de Windows como al panel de control clásico.
 * **Vinculación Departamental Seleccionada:** Se aplicó el vínculo directo de la directiva sobre la Unidad Organizativa de `Contabilidad`. Esto asegura que los perfiles administrativos (como la cuenta `anacon`) hereden la prohibición de manera obligatoria, mientras que el departamento de `Informática` queda exento para mantener sus privilegios de soporte técnico.
 
+## 📂 7. Servidor de Archivos Compartidos y Seguridad NTFS (NAS)
+Se transformó el servidor en un centro de almacenamiento centralizado (NAS) mediante el aprovisionamiento de recursos compartidos en red y el blindaje selectivo de accesos:
+
+* **Despliegue del Recurso Compartido:** Se creó el directorio raíz `CONTABILIDAD_COMPARTIDO` en el disco local `C:`, habilitando el protocolo de red para su publicación y asignando permisos genéricos de modificación en la manguera de datos.
+* **Ruptura de Herencia NTFS:** Se deshabilitó la herencia nativa de permisos del sistema de archivos para aislar el contenedor, bloqueando los accesos genéricos de lectura predeterminados de la plantilla de usuarios de Windows.
+* **Control de Acceso Selectivo:** Se auditó y aprovisionó una regla explícita otorgando control total de modificación a la cuenta administrativa (`anacon`), asegurando que solo el personal autorizado pueda interactuar con los datos del departamento.
+
+
 
 
 
